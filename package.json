@@ -1,0 +1,26 @@
+{
+  "name": "db-document-cronjob-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenhoaiphuoc1995/db-document-cronjob-service.git"
+  },
+  "author": "nguyenhoaiphuoc1995",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenhoaiphuoc1995/db-document-cronjob-service/issues"
+  },
+  "homepage": "https://github.com/nguyenhoaiphuoc1995/db-document-cronjob-service#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "xlsx": "^0.15.6"
+  }
+}
