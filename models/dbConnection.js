@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const Sequelize = require('sequelize');
 var sequelize = new Sequelize(process.env.SQL_DATABASE, process.env.SQL_USERNAME, process.env.SQL_PASSWORD, {
     host: process.env.SQL_HOST,
@@ -18,7 +18,7 @@ sequelize
     .authenticate()
     .then((err) => {
         if (err) {
-            console.error(`Authenticate DB: ${process.env.NODE_ENV} ${err}`);
+            console.error(`Authenticate DB: ${err}`);
         } else {
             console.log(`Connection DB has connected on: ${process.env.SQL_DATABASE}`);
         }
