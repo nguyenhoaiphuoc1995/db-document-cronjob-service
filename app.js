@@ -3,12 +3,10 @@ const routes = require('./routes');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config()
 const compression = require('compression');
 const cors = require('cors');
-const db = require('./models/dbConnection');
 
+require('dotenv').config();
 app.use(compression());
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,7 +19,7 @@ app.listen(port, function () {
 });
 
 process.on('SIGINT', () => {
-    db.close();
+    require('./models').sequelize.close();
 });
 
 async function createFolders() {

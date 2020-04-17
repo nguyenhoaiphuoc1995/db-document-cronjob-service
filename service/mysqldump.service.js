@@ -1,5 +1,4 @@
 const mysqldump = require('mysqldump');
-require('dotenv').config();
 exports.getResult = () => {
     return mysqldump({
         connection: {
